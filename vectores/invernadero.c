@@ -21,7 +21,7 @@ int main(){
         if(temperaturaMinima > temperaturas[i]){
             temperaturaMinima = temperaturas[i];
         }
-        if(temperaturas[i]>temperaturaLimite){
+        if(temperaturas[i]>temperaturaLimite){//x
             numSupTemp++;
         }
     }
