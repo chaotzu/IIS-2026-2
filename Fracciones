@@ -1,0 +1,31 @@
+#include <stdio.h>
+typedef struct{
+    int numerador;
+    int denominador;
+} Fraccion;
+Fraccion Suma(Fraccion a, Fraccion b);
+Fraccion Resta(Fraccion x, Fraccion y);
+Fraccion Multiplicacion(Fraccion x, Fraccion y);
+Fraccion Division(Fraccion x, Fraccion y);
+Fraccion Simplifica(Fraccion x);
+int main()
+{
+    Fraccion f1, f2;
+    printf("Ingresa el numerador de la primer fraccion\n");
+    scanf("%d", &f1.numerador);
+    printf("Ingresa el denominador de la primer fraccion\n");
+    scanf("%d", &f1.denominador);
+    printf("Ingresa el numerador de la segunda fraccion\n");
+    scanf("%d", &f2.numerador);
+    printf("Ingresa el denominador de la segunda fraccion\n");
+    scanf("%d", &f2.denominador);
+    Fraccion resultado = Suma(f1,f2);
+    printf("La suma de tus fracciones es %d / %d", resultado.numerador, resultado.denominador);
+    return 0;
+}
+Fraccion Suma(Fraccion a, Fraccion b){
+    Fraccion resultado;
+    resultado.numerador = ((a.numerador * b.denominador) + (b.numerador * a.denominador));
+    resultado.denominador = (a.denominador * b.denominador);
+    return resultado;
+}
